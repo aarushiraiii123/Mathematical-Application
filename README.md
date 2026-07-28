@@ -17,14 +17,14 @@ A simple web-based calculator built using HTML, CSS, and JavaScript.
 
 ## Project Screenshots
 
-### Home
+### Home/Factorial
 ![Home](./Screenshot%20(114).png)
 
 ### HCF
 ![HCF](Screenshot%20(115).png)
 
-### Factorial
-![Factorial](Screenshot%20(116).png)
+### LCM
+![LCM](Screenshot%20(116).png)
 
 ## Author
 **Aarushi Rai**
