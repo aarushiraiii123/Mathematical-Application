@@ -264,8 +264,6 @@ body{
     transform:translateY(-3px);
 }
 
-/* Loader */
-
 .loader{
     display:none;
     text-align:center;
@@ -288,8 +286,6 @@ body{
     font-weight:600;
 }
 
-/* Success Toast */
-
 #toast{
     display:none;
     position:fixed;
@@ -304,7 +300,6 @@ body{
     z-index:999;
     animation:fadeIn .5s ease;
 }
-/* Statistics */
 
 .stats-card,
 .result-card,
@@ -415,8 +410,6 @@ body{
     font-weight:700;
 }
 
-/* Animations */
-
 @keyframes spin{
     from{
         transform:rotate(0deg);
@@ -460,7 +453,6 @@ body{
     }
 
 }
-/* Responsive */
 
 @media(max-width:900px){
 
