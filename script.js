@@ -113,10 +113,7 @@ calculateBtn.addEventListener("click",()=>{
 
         let answer="";
         let stepText="";
-        // ==========================
-// FACTORIAL
-// ==========================
-
+        
 if(selectedOperation === "factorial"){
 
     if(firstNumber < 0){
@@ -178,10 +175,6 @@ if(selectedOperation === "factorial"){
 
 }
 
-// ==========================
-// HCF
-// ==========================
-
 else if(selectedOperation === "gcd"){
 
     let a = Math.abs(firstNumber);
@@ -228,9 +221,6 @@ else if(selectedOperation === "gcd"){
     gcdTotal++;
 
 }
-// ==========================
-// LCM
-// ==========================
 
 else{
 
@@ -284,20 +274,12 @@ else{
 
 }
 
-// ==========================
-// Statistics
-// ==========================
-
 total++;
 
 totalCalculation.innerHTML = total;
 factorialCount.innerHTML = factorialTotal;
 gcdCount.innerHTML = gcdTotal;
 lcmCount.innerHTML = lcmTotal;
-
-// ==========================
-// Success Toast
-// ==========================
 
 toast.style.display = "block";
 
@@ -306,10 +288,6 @@ setTimeout(()=>{
     toast.style.display = "none";
 
 },2000);
-
-// ==========================
-// Recent Activity
-// ==========================
 
 historyList.innerHTML = "";
 
@@ -341,9 +319,6 @@ else{
 },1000);
 
 });
-// ==========================
-// Copy Result
-// ==========================
 
 copyBtn.addEventListener("click",()=>{
 
@@ -375,10 +350,6 @@ copyBtn.addEventListener("click",()=>{
 
 });
 
-// ==========================
-// Download Result
-// ==========================
-
 downloadBtn.addEventListener("click",()=>{
 
     const content = `
@@ -407,10 +378,6 @@ ${steps.innerText}
 
 });
 
-// ==========================
-// Reset
-// ==========================
-
 resetBtn.addEventListener("click",()=>{
 
     num1.value = "";
@@ -436,10 +403,6 @@ resetBtn.addEventListener("click",()=>{
 
 });
 
-// ==========================
-// Clear History
-// ==========================
-
 clearHistoryBtn.addEventListener("click",()=>{
 
     history = [];
@@ -449,10 +412,6 @@ clearHistoryBtn.addEventListener("click",()=>{
     `;
 
 });
-
-// ==========================
-// Enter Key Support
-// ==========================
 
 document.addEventListener("keydown",(e)=>{
 
