@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mathematical Application</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="card">
+
+<div class="header">
+
+<i class="fa-solid fa-calculator"></i>
+
+<h1>Mathematical Application</h1>
+
+<p>
+Calculate Factorial, HCF & LCM with Step-by-Step Solution
+</p>
+
+</div>
+
+<!-- Operation Cards -->
+
+<div class="operation-title">
+
+<h2>Select an Operation</h2>
+
+</div>
+
+<div class="operations">
+
+<div class="operation active" data-operation="factorial">
+
+<i class="fa-solid fa-infinity"></i>
+
+<h3>Factorial</h3>
+
+</div>
+
+<div class="operation" data-operation="gcd">
+
+<i class="fa-solid fa-divide"></i>
+
+<h3>HCF</h3>
+
+</div>
+
+<div class="operation" data-operation="lcm">
+
+<i class="fa-solid fa-square-root-variable"></i>
+
+<h3>LCM</h3>
+
+</div>
+
+</div>
+
+<!-- Formula Card -->
+
+<div class="formula-card">
+
+<h2>
+
+<i class="fa-solid fa-book-open"></i>
+
+Formula & Explanation
+
+</h2>
+
+<p id="formulaText">
+
+n! = n × (n-1) × (n-2) × ... × 1
+
+</p>
+
+</div>
+
+<!-- Input Area -->
+
+<div class="input-area">
+
+    <div class="input-box">
+
+        <label>First Number</label>
+
+        <input
+        type="number"
+        id="num1"
+        placeholder="Enter First Number">
+
+    </div>
+
+    <div class="input-box" id="secondInput">
+
+        <label>Second Number</label>
+
+        <input
+        type="number"
+        id="num2"
+        placeholder="Enter Second Number">
+
+    </div>
+
+</div>
+
+</div>
+
+<!-- Validation Message -->
+
+<div id="errorMessage"></div>
+<!-- Buttons -->
+
+<div class="buttons">
+
+<button id="calculateBtn">
+
+<i class="fa-solid fa-play"></i>
+
+Calculate
+
+</button>
+
+<button id="resetBtn">
+
+<i class="fa-solid fa-arrow-rotate-left"></i>
+
+Reset
+
+</button>
+
+<button id="clearHistoryBtn">
+
+<i class="fa-solid fa-trash"></i>
+
+Clear History
+
+</button>
+
+</div>
+
+<!-- Extra Action Buttons -->
+
+<div class="extra-buttons">
+
+<button id="copyBtn">
+
+<i class="fa-solid fa-copy"></i>
+
+Copy Result
+
+</button>
+
+<button id="downloadBtn">
+
+<i class="fa-solid fa-download"></i>
+
+Download Result
+
+</button>
+
+</div>
+
+<!-- Loading Animation -->
+
+<div id="loader" class="loader">
+
+<div class="spinner"></div>
+
+<p>Calculating...</p>
+
+</div>
+
+<!-- Success Toast -->
+
+<div id="toast">
+
+<i class="fa-solid fa-circle-check"></i>
+
+Calculation Completed Successfully
+
+</div>
+
+<!-- Statistics -->
+
+<div class="stats-card">
+
+<h2>
+
+<i class="fa-solid fa-chart-column"></i>
+
+Statistics
+
+</h2>
+
+<div class="stats-grid">
+
+<div class="stat-box">
+
+<h3 id="totalCalculation">0</h3>
+
+<p>Total Calculations</p>
+
+</div>
+
+<div class="stat-box">
+
+<h3 id="factorialCount">0</h3>
+
+<p>Factorial</p>
+
+</div>
+
+<div class="stat-box">
+
+<h3 id="gcdCount">0</h3>
+
+<p>HCF</p>
+
+</div>
+
+<div class="stat-box">
+
+<h3 id="lcmCount">0</h3>
+
+<p>LCM</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Result -->
+
+<div class="result-card">
+
+<h2>
+
+<i class="fa-solid fa-square-poll-vertical"></i>
+
+Result
+
+</h2>
+
+<div id="result">
+
+Your result will appear here...
+
+</div>
+
+</div>
+
+<!-- Step By Step -->
+
+<div class="steps-card">
+
+<h2>
+
+<i class="fa-solid fa-list-check"></i>
+
+Step By Step Solution
+
+</h2>
+
+<div id="steps">
+
+No calculation yet...
+
+</div>
+
+</div>
+<!-- Recent Activity -->
+
+<div class="history-card">
+
+    <h2>
+
+        <i class="fa-solid fa-clock-rotate-left"></i>
+
+        Recent Activity
+
+    </h2>
+
+    <ul id="historyList">
+
+        <li>No calculations yet.</li>
+
+    </ul>
+
+</div>
+
+<!-- About Project -->
+
+<div class="about-card">
+
+    <h2>
+
+        <i class="fa-solid fa-circle-info"></i>
+
+        About Project
+
+    </h2>
+
+    <div class="about-content">
+
+        <div class="about-box">
+
+            <h3>Project</h3>
+
+            <p>Mathematical Application</p>
+
+        </div>
+
+        <div class="about-box">
+
+            <h3>Technology</h3>
+
+            <p>HTML • CSS • JavaScript</p>
+
+        </div>
+
+        <div class="about-box">
+
+            <h3>Operations</h3>
+
+            <p>Factorial, HCF & LCM</p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Footer -->
+
+<div class="footer">
+
+    <p>
+
+        © 2026 Mathematical Application
+
+    </p>
+
+    <p>
+
+        Designed & Developed by <strong>Aarushi Rai</strong>
+
+    </p>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
