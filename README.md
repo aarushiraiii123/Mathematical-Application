@@ -15,5 +15,16 @@ A simple web-based calculator built using HTML, CSS, and JavaScript.
 - CSS
 - JavaScript
 
+## Project Screenshots
+
+### Home
+![Home](./Screenshot%20(114).png)
+
+### HCF
+![HCF](Screenshot%20(115).png)
+
+### Factorial
+![Factorial](Screenshot%20(116).png)
+
 ## Author
 **Aarushi Rai**
